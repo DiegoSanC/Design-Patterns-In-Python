@@ -5,5 +5,5 @@ class EVTesla(metaclass=ABCMeta):
     
     @staticmethod
     @abstractmethod
-    def get_range(self):
+    def create_vehicle(self):
         "interface method"
