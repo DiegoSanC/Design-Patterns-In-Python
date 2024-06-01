@@ -1,4 +1,4 @@
-from abstract_factory.diego.vehicles.tesla_semi import Semi
+from vehicles.tesla_semi import Semi
 
 class GigaFactoryNevada:
     @staticmethod

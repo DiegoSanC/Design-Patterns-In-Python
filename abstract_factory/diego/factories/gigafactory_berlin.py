@@ -1,4 +1,4 @@
-from abstract_factory.diego.vehicles.tesla_model_y import ModelY
+from vehicles.tesla_model_y import ModelY
 
 class GigaFactoryBerlin:
     @staticmethod

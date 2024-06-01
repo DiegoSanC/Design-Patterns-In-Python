@@ -1,11 +1,11 @@
-from abstract_factory.diego.factories.gigafactory_nevada import GigaFactoryNevada
-from abstract_factory.diego.factories.gigafactory_austin import GigaFactoryAustin
-from abstract_factory.diego.factories.gigafactory_berlin import GigaFactoryBerlin
-from abstract_factory.diego.interface_abstract_giga_factory import IAbstractGigaFactory
+from factories.gigafactory_nevada import GigaFactoryNevada
+from factories.gigafactory_austin import GigaFactoryAustin
+from factories.gigafactory_berlin import GigaFactoryBerlin
+from interface_abstract_giga_factory import IAbstractGigaFactory
 
 class AbstractGigaFactory(IAbstractGigaFactory):
     @staticmethod
-    def create_giga_factory(vehicle):
+    def create_vehicle(vehicle):
         match vehicle:
             case 'modelY':
                 return GigaFactoryBerlin.create_vehicle('modelY')
@@ -20,5 +20,5 @@ class AbstractGigaFactory(IAbstractGigaFactory):
             
 
 if __name__ == "__main__":
-    PRODUCT = AbstractGigaFactory.create_vehicle('cybertruck')
+    PRODUCT = AbstractGigaFactory.create_vehicle('modelY')
     print(PRODUCT.__class__)

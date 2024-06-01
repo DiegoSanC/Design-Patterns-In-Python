@@ -1,5 +1,5 @@
-from abstract_factory.diego.vehicles.tesla_model_3 import Model3
-from abstract_factory.diego.vehicles.tesla_cybertruck import CyberTruck
+from vehicles.tesla_model_3 import Model3
+from vehicles.tesla_cybertruck import CyberTruck
 
 class GigaFactoryAustin:
     @staticmethod

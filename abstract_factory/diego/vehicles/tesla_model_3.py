@@ -1,4 +1,4 @@
-from abstract_factory.diego.interface_ev.interface_tesla import EVTesla
+from interface_ev.interface_tesla import EVTesla
 
 class Model3(EVTesla):
     def __init__(self):
