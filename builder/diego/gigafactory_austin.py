@@ -6,9 +6,9 @@ class GigaFactoryAustin:
     def create_vehicle(type_):
         match type_:
             case 'model3':
-                return Model3Director.construct()
+                return Model3Director.construct().construction()
             case 'cybertruck':
-                return CyberTruckDirector.construct() 
+                return CyberTruckDirector.construct().construction()
             case _:
                 raise ValueError(f'Vehicle {type_} not found')
             

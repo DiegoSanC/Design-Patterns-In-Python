@@ -5,6 +5,6 @@ class GigaFactoryFremont:
     def create_vehicle(type_):
         match type_:
             case 'modelS':
-                return ModelSDirector.construct()
+                return ModelSDirector.construct().construction()
             case _:
                 raise ValueError(f'Vehicle {type_} not found')
