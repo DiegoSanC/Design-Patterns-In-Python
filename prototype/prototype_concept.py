@@ -23,8 +23,8 @@ class MyClass(IProtoType):
     def clone(self):
         " This clone method uses a shallow copy technique "
         return type(self)(
-            self.field  # a shallow copy is returned
-            # self.field.copy() # this is also a shallow copy, but has
+            #self.field  # a shallow copy is returned
+            self.field.copy() # this is also a shallow copy, but has
             # also shallow copied the first level of the field. So it
             # is essentially a shallow copy but 2 levels deep. To
             # recursively deep copy collections containing inner
@@ -35,7 +35,7 @@ class MyClass(IProtoType):
         )
 
     def __str__(self):
-        return f"{id(self)}\tfield={self.field}\ttype={type(self.field)}"
+        return f"{id(self)}\tfield={self.field}\ttype={type(self.field)}\tfield_id={id(self.field)}\tsecond_position_id={id(self.field[1])}"
 
 
 # The Client
